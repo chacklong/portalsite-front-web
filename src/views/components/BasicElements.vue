@@ -12,7 +12,7 @@
               <badge type="default">产品测试</badge>
               <badge type="default">数据运维</badge>
               <hr class="my-md-4 my-3">
-              <a href="#" class="btn btn-lg btn-outline-primary w-100 mt-4">了解更多信息</a>
+              <a href="#" class="btn btn-lg btn-outline-primary w-80 mt-4">了解更多信息</a>
             </div>
           </div>
           <div class="col-md-6 offset-lg-1 order-md-2 order-1 rellax">
@@ -31,7 +31,7 @@
               <badge type="default">产品测试</badge>
               <badge type="default">数据运维</badge>
               <hr class="my-md-4 my-3">
-              <a href="#" class="btn btn-lg btn-outline-primary w-100 mt-4">了解更多信息</a>
+              <a href="#" class="btn btn-lg btn-outline-primary w-80 mt-4">了解更多信息</a>
             </div>
           </div>
           <div class="col-md-6 offset-lg-1 order-md-2 order-1 rellax">
@@ -50,7 +50,7 @@
               <badge type="default">产品测试</badge>
               <badge type="default">数据运维</badge>
               <hr class="my-md-4 my-3">
-              <a href="#" class="btn btn-lg btn-outline-primary w-100 mt-4">了解更多信息</a>
+              <a href="#" class="btn btn-lg btn-outline-primary w-80 mt-4">了解更多信息</a>
             </div>
           </div>
           <div class="col-md-6 offset-lg-1 order-md-2 order-1 rellax">
@@ -74,7 +74,7 @@ export default {};
     margin-right: -155px !important;
     margin-top: 52px;
 }
-.w-100 {
-    width: 30% !important;
-}
+/* .w-100 {
+    width: 30%;
+} */
 </style>

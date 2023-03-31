@@ -15,31 +15,21 @@
         <div class="container shape-container d-flex align-items-center">
             <div class="col px-0">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-7 text-center pt-lg">
-                        <!-- <img src="img/brand/white.png" style="width: 200px;" class="img-fluid"> -->
+                    <div class="col-lg-8 text-center">
                         <h1 class="display-1 text-white">新型IT技术服务中心</h1>
                         <p class="lead text-white mt-4 mb-5">我们是专家，为您的业务发展提供最广泛的IT服务和解决方案。</p>
                         <div class="btn-wrapper">
-                            <base-button tag="a"
-                                         href="https://demos.creative-tim.com/vue-argon-design-system/documentation"
+                            <div class="mb-3 mb-sm-0">
+                                <Modals></Modals>
+                            </div>
+                            <!-- <base-button tag="a"
+                                         href="#"
                                          class="mb-3 mb-sm-0"
                                          type="default"
+                                         @click="modals.modal3 = true"
                                          >
                                 开始咨询
-                            </base-button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-around stars-and-coded">
-                    <div class="row nav-tag">
-                        <div class="col-sm">
-                            <span>产品与技术服务</span>
-                        </div>
-                        <div class="col-sm">
-                            <span>行业解决方案分析</span>
-                        </div>
-                        <div class="col-sm">
-                            <span>企业团队协作</span>
+                            </base-button> -->
                         </div>
                     </div>
                 </div>
@@ -48,7 +38,12 @@
     </section>
 </template>
 <script>
-export default {};
+import Modals from '../../views/components/JavascriptComponents/Modals.vue'
+export default {
+    components: {
+        Modals
+    }
+};
 </script>
 <style>
 .section-hero {
@@ -56,8 +51,8 @@ export default {};
     background-size: cover;
     background-repeat: no-repeat;
 }
-.col-sm{
+/* .col-sm{
     width: 158px !important;
-    margin-top: 200px;
-}
+    margin-top: 100px;
+} */
 </style>

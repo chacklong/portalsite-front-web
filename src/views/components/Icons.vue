@@ -3,16 +3,13 @@
         <div class="container" @mouseleave="showIconsAnimation = false">
             <div class="row justify-content-center" @mouseover="showIconsAnimation = true">
                 <div class="col-lg-8 text-center">
-                    <h2 class="display-3">Nucleo Icons</h2>
+                    <h2 class="display-3">合作蓝图</h2>
                     <p class="lead">
-                        The official package contains over 21.000 icons which are looking great in combination with
-                        Argon Design System. Make sure you check all of them and use those that you like the most.
+                        这将是我们打向世界市场得到重要方向之一.
                     </p>
                     <div class="btn-wrapper">
-                        <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/icons.html"
-                           class="btn btn-primary">View demo icons</a>
-                        <a href="https://nucleoapp.com/?ref=1712" target="_blank" class="btn btn-default mt-3 mt-md-0">View
-                            all icons</a>
+                        <a href="#"
+                           class="btn btn-primary">点击</a>
                     </div>
                 </div>
             </div>
@@ -38,7 +35,7 @@
                         <i class="icon ni ni-camera-compact"></i>
                         <i class="icon ni ni-chart-bar-32"></i>
                     </div>
-                    <span class="blur-hidden h5 text-success">Explore all the 21.000+ Nucleo Icons</span>
+                    <span class="blur-hidden h5 text-success">目前已有2500+合作企业</span>
                 </a>
             </div>
         </div>
