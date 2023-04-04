@@ -51,7 +51,6 @@
                     </div>
                 </div>
             </section>
-            <!-- 1st Hero Variation -->
         </div>
         <section class="section section-lg pt-lg-0 mt--200">
             <div class="container">
@@ -186,57 +185,89 @@
             </div>
         </section>
         <section class="section bg-secondary section-lg bg-gradient-default">
-            <div class="container" style="margin-left: 0 !important;">
-                <div class="row col-md-100">
-                    <!-- 流动图 -->
-                    <div class="col">
+            <div class="container" style="margin-top: -40px;">
+                <div class="col-header text-center" style="margin-bottom: 30px;">
+                    <h1 class="display2 text-white">企业资讯</h1>
+                    <div class="col-text">
+                        <p class="lead text-white">企业资讯展示区</p>
+                    </div>
+                </div>
+                <div class="row-change">
+                    <div class="col-change col-md-6">
                         <div class="card bg-default shadow border-0">
-                            <b-carousel id="carousel1"
-                                    controls
-                                    indicators>
-                            <!-- Text slides with image -->
-                                <b-carousel-slide img-src="img/theme/img-1-1200x1000.jpg">
-                                </b-carousel-slide>
-                                <b-carousel-slide img-src="img/theme/img-2-1200x1000.jpg">
-                                </b-carousel-slide>
-                            </b-carousel>
+                            <a href="http://8.222.140.62:8080/profile#/new">
+                                <b-carousel id="carousel1"
+                                        controls
+                                        indicators>
+                                    <b-carousel-slide img-src="img/theme/img-1-1200x1000.jpg">
+                                    </b-carousel-slide>
+                                    <b-carousel-slide img-src="img/theme/img-2-1200x1000.jpg">
+                                    </b-carousel-slide>
+                                </b-carousel>
+                            </a>
                             <blockquote class="card-blockquote">
                                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
                                      class="svg-bg">
                                     <polygon points="0,52 583,95 0,95" class="fill-default"></polygon>
                                     <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default"></polygon>
                                 </svg>
-                                <h4 class="display-3 font-weight-bold text-white">Design System</h4>
-                                <p class="lead text-italic text-white">The Arctic Ocean freezes every winter and much of
-                                    the sea-ice then thaws every summer, and that process will continue whatever
-                                    happens.</p>
+                                <h4 class="display-3 font-weight-bold text-white">{{title}}</h4>
+                                <p class="lead text-italic text-white">{{truncateText}}</p>
+                                    <a href="#" class="font-weight-bold text-warning mt-5">查看详情</a>
                             </blockquote>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-change col-md-6">
                         <div class="card bg-default shadow border-0">
-                            <b-carousel id="carousel1"
-                                    controls
-                                    indicators>
-                            <!-- Text slides with image -->
-                                <b-carousel-slide img-src="img/theme/img-1-1200x1000.jpg">
-                                </b-carousel-slide>
-                                <b-carousel-slide img-src="img/theme/img-2-1200x1000.jpg">
-                                </b-carousel-slide>
-                            </b-carousel>
+                            <a href="http://8.222.140.62:8080/profile#/new">
+                                <b-carousel id="carousel1"
+                                        controls
+                                        indicators>
+                                    <b-carousel-slide img-src="img/theme/img-1-1200x1000.jpg">
+                                    </b-carousel-slide>
+                                    <b-carousel-slide img-src="img/theme/img-2-1200x1000.jpg">
+                                    </b-carousel-slide>
+                                </b-carousel>
+                            </a>
                             <blockquote class="card-blockquote">
                                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
                                      class="svg-bg">
                                     <polygon points="0,52 583,95 0,95" class="fill-default"></polygon>
                                     <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default"></polygon>
                                 </svg>
-                                <h4 class="display-3 font-weight-bold text-white">Design System</h4>
-                                <p class="lead text-italic text-white">The Arctic Ocean freezes every winter and much of
-                                    the sea-ice then thaws every summer, and that process will continue whatever
-                                    happens.</p>
+                                <h4 class="display-3 font-weight-bold text-white">{{title}}</h4>
+                                <p class="lead text-italic text-white">{{truncateText}}</p>
+                                    <a href="#" class="font-weight-bold text-warning mt-5">查看详情</a>
                             </blockquote>
                         </div>
                     </div>
+                    <div class="col-change col-md-6">
+                        <div class="card bg-default shadow border-0">
+                            <a href="http://8.222.140.62:8080/profile#/new">
+                                <b-carousel id="carousel1"
+                                        controls
+                                        indicators>
+                                    <b-carousel-slide img-src="img/theme/img-1-1200x1000.jpg">
+                                    </b-carousel-slide>
+                                    <b-carousel-slide img-src="img/theme/img-2-1200x1000.jpg">
+                                    </b-carousel-slide>
+                                </b-carousel>
+                            </a>
+                            <blockquote class="card-blockquote">
+                                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                                     class="svg-bg">
+                                    <polygon points="0,52 583,95 0,95" class="fill-default"></polygon>
+                                    <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default"></polygon>
+                                </svg>
+                                <h4 class="display-3 font-weight-bold text-white">{{title}}</h4>
+                                <p class="lead text-italic text-white">{{truncateText}}</p>
+                                    <a href="#" class="font-weight-bold text-warning mt-5">查看详情</a>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-footer text-center" style="margin-top: 60px;">
+                    <base-button outline type="primary" class="text-white" style="width: 20%;"><a href="http://8.222.140.62:8080/login">查看更多</a></base-button>
                 </div>
             </div>
         </section>
@@ -398,7 +429,7 @@
                                 <p class="lead text-white mt-3">介绍公司的招聘信息和职业发展机会，让访客有机会了解公司的文化、价值观和发展前景</p>
                             </div>
                             <div class="col-lg-3 ml-lg-auto">
-                                <base-button tag="a" href="http://localhost:8080/profile#/profile/" type="white" block size="lg">
+                                <base-button tag="a" href="http://8.222.140.62:8080/profile" type="white" block size="lg">
                                     加入我们
                                 </base-button>
                             </div>
@@ -525,6 +556,8 @@ export default {
             inputAddress:'',
             inputEmail:'',
             inputPhone:'',
+            text: 'The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens.',
+            title: '主题名称'
         }
     },
     methods: {
@@ -572,6 +605,29 @@ export default {
         }
         alert('提交成功')
     }
+    },
+    computed: {
+        // eslint-disable-next-line vue/return-in-computed-property
+        truncateText(){
+            const maxLength = 100;
+            return this.text.length > maxLength ? this.text.slice(0,maxLength)+' ...':this.text;
+        }
+    },
+    mounted: function(){
+        const container = this.$el.querySelector('.row-change');
+        const scrollSpeed = 1;
+        const vm = this;
+        setInterval(function() {
+            if(vm.isScrolling){
+                container.scrollLeft += scrollSpeed;
+            }
+        }, 20);
+        container.addEventListener('mouseenter',()=>{
+            vm.isScrolling = false;
+        });
+        container.addEventListener('mouseleave',()=>{
+            vm.isScrolling = true
+        })
     }
 };
 </script>
@@ -587,5 +643,18 @@ export default {
 }
 .text-p{
     margin-left: 46px !important;
+}
+.row-change{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+}
+.row-change::-webkit-scrollbar{
+    display: none !important;
+}
+.col-change{
+    flex: 0 0 auto !important;
 }
 </style>

@@ -7,11 +7,14 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
+import NewsDetail from "./views/New.vue";
 
 Vue.use(Router);
 
 export default new Router({
   linkExactActiveClass: "active",
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes: [
     {
       path: "/",
@@ -57,6 +60,11 @@ export default new Router({
         default: Profile,
         footer: AppFooter
       }
+    },
+    {
+      path: "/news/:id",
+      name: "NewsDetail",
+      component: NewsDetail
     }
   ],
   scrollBehavior: to => {

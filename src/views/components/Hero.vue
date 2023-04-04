@@ -19,17 +19,16 @@
                         <h1 class="display-1 text-white">新型IT技术服务中心</h1>
                         <p class="lead text-white mt-4 mb-5">我们是专家，为您的业务发展提供最广泛的IT服务和解决方案。</p>
                         <div class="btn-wrapper">
-                            <div class="mb-3 mb-sm-0">
+                            <!-- <div class="mb-3 mb-sm-0">
                                 <Modals></Modals>
-                            </div>
-                            <!-- <base-button tag="a"
-                                         href="#"
+                            </div> -->
+                            <base-button tag="a"
+                                         href="http://localhost:8080/profile#/register"
                                          class="mb-3 mb-sm-0"
                                          type="default"
-                                         @click="modals.modal3 = true"
                                          >
                                 开始咨询
-                            </base-button> -->
+                            </base-button>
                         </div>
                     </div>
                 </div>
