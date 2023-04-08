@@ -13,3 +13,9 @@ export function getNewDetail(id){
         method: 'get',
     })
 }
+export function getNewDefault(){
+    return request({
+        url: '/news?populate=image',
+        method: 'get',
+    })
+}

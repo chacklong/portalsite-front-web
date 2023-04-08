@@ -55,9 +55,10 @@
                         <span class="nav-link-inner--text">MENU2</span>
                     </a>
                     <!-- <router-link to="/landing" class="dropdown-item">Landing</router-link> -->
-                    <router-link to="/profile" class="dropdown-item">招聘信息</router-link>
-                    <router-link to="/login" class="dropdown-item">企业资讯</router-link>
-                    <router-link to="/register" class="dropdown-item">联系我们</router-link>
+                    <router-link to="/Jobs" class="dropdown-item">招聘信息</router-link>
+                    <router-link to="/News" class="dropdown-item">企业资讯</router-link>
+                    <router-link to="/Contact" class="dropdown-item">联系我们</router-link>
+                    <router-link to="/AbouUs" class="dropdown-item">关于我们</router-link>
                     <!-- <router-link to="/new" class="dropdown-item">new</router-link> -->
                 </base-dropdown>
             </ul>
@@ -93,9 +94,9 @@
                 <li class="nav-item d-none d-lg-block ml-lg-4">
                     <a href="#" target="_blank" rel="noopener"
                        class="btn btn-neutral btn-icon">
-                <span class="btn-inner--icon">
+                <!-- <span class="btn-inner--icon">
                   <i class="ni ni-info mr-2"></i>
-                </span>
+                </span> -->
                         <span class="nav-link-inner--text">menu</span>
                     </a>
                 </li>

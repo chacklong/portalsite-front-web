@@ -3,11 +3,12 @@ import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Components from "./views/Components.vue";
-import Landing from "./views/Landing.vue";
-import Login from "./views/Login.vue";
-import Register from "./views/Register.vue";
-import Profile from "./views/Profile.vue";
-import NewsDetail from "./views/New.vue";
+import CompanyHome from "./views/CompanyHome.vue";
+import News from "./views/News.vue";
+import Contact from "./views/Contact.vue";
+import Jobs from "./views/Jobs.vue";
+import NewContent from "./views/NewContent.vue";
+import AbouUs from "./views/AboutUs.vue"
 
 Vue.use(Router);
 
@@ -26,45 +27,50 @@ export default new Router({
       }
     },
     {
-      path: "/landing",
-      name: "landing",
+      path: "/companyhome",
+      name: "companyhome",
       components: {
         header: AppHeader,
-        default: Landing,
+        default: CompanyHome,
         footer: AppFooter
       }
     },
     {
-      path: "/login",
-      name: "login",
+      path: "/news",
+      name: "news",
       components: {
         header: AppHeader,
-        default: Login,
+        default: News,
         footer: AppFooter
       }
     },
     {
-      path: "/register",
-      name: "register",
+      path: "/contact",
+      name: "contact",
       components: {
         header: AppHeader,
-        default: Register,
+        default: Contact,
         footer: AppFooter
       }
     },
     {
-      path: "/profile",
-      name: "profile",
+      path: "/Jobs",
+      name: "Jobs",
       components: {
         header: AppHeader,
-        default: Profile,
+        default: Jobs,
         footer: AppFooter
       }
     },
     {
       path: "/news/:id",
-      name: "NewsDetail",
-      component: NewsDetail
+      name: "newcontent",
+      component: NewContent
+    },
+    {
+      path: "/about",
+      name: "aboutus",
+      component: AbouUs
     }
   ],
   scrollBehavior: to => {

@@ -2,14 +2,14 @@ import request from '@/api/request'
 
 export function getWorkList(params){
     return request({
-        url: '/works',
+        url: '/jobs',
         method: 'get',
         params
     })
 }
 export function getWorkDetail(id){
     return request({
-        url: `/works/${id}`,
+        url: `/jobs/${id}`,
         method: 'get'
     })
 }
