@@ -11,11 +11,11 @@ import CooperateBox from "./components/CooperateBox";
 import CompanyHome from "./CompanyHome.vue";
 
 export default {
-  name: "components",
+  name:'components',
   components: {
     HomeHeadPage,
     CooperateBox,
-    CompanyHome,
+    CompanyHome
   }
 };
 </script>

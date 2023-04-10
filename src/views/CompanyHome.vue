@@ -98,7 +98,7 @@
                     <h1>企业资讯</h1>
                     <span class="display-4">Corporate news</span>
                 </div>
-                <div v-for="(item,index) in newList" :key="index" class="row row-grid align-items-center align-items-center-top">
+                <div v-for="(item,index) in newList.slice(0,4)" :key="index" class="row row-grid align-items-center align-items-center-top">
                     <div class="col-md-6 order-md-2">
                         <img :src="'http://192.168.31.30:1337'+item.attributes.image.data.attributes.url" class="img-fluid floating">
                     </div>
@@ -152,16 +152,14 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="row row-grid">
-                            <div class="col-lg-4" v-for="(item,index) in jobList" :key="index" style="margin-top: 22px;">
+                            <div class="col-lg-4 col-md-6 col-sm-12" v-for="(item,index) in jobList.slice(0,3)" :key="index" style="margin-top: 22px;">
                                 <card class="border-0" hover shadow body-classes="py-5">
                                     <icon name="ni ni-briefcase-24" type="primary" rounded class="mb-4">
                                     </icon>
                                     <h6 class="text-primary text-uppercase">{{ item.attributes.title }}</h6>
-                                    <p class="description mt-3"><vue-markdown>{{ item.attributes.description.slice(0,100) }}</vue-markdown></p>
+                                    <p class="description mt-3"><vue-markdown>{{ item.attributes.description.slice(0,90) }}</vue-markdown></p>
                                     <div>
-                                        <badge type="primary" rounded>软件</badge>
-                                        <badge type="primary" rounded>硬件</badge>
-                                        <badge type="primary" rounded>网络</badge>
+                                        <badge v-for="(keyword,index) in jobKeywords[index]" :key="index" type="primary" rounded>{{ keyword }}</badge>
                                     </div>
                                     <base-button tag="a" href="#" type="primary" class="mt-4">
                                         Learn more
@@ -361,23 +359,26 @@
                         <card gradient="secondary" shadow body-classes="p-lg-5">
                             <h4 class="mb-1">联系我们</h4>
                             <p class="mt-0">您的安全问题对我们非常重要。</p>
-                            <base-input ref="inputNameRef" v-model="inputName" class="mt-5" alternative placeholder="姓名" addon-left-icon="ni ni-circle-08">
-                            </base-input>
-                            <base-input ref="inputPhoneRef" v-model="inputPhone" class="mt-0" alternative placeholder="手机号" addon-left-icon="ni ni-mobile-button">
-                            </base-input>
-                            <base-input ref="inputCompanyRef" v-model="inputCompany" class="mt-0" alternative placeholder="公司名称" addon-left-icon="ni ni-building">
-                            </base-input>
-                            <base-input ref="inputAddressRef" v-model="inputAddress" class="mt-0" alternative placeholder="地址" addon-left-icon="ni ni-square-pin">
-                            </base-input>
-                            <base-input ref="inputEmailRef" v-model="inputEmail" alternative placeholder="邮箱" addon-left-icon="ni ni-email-83">
-                            </base-input>
-                            <base-input class="mb-4">
-                                <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80"
-                                    placeholder="提交备注信息..."></textarea>
-                            </base-input>
-                            <base-button type="default" round block size="lg" @click="submitForm">
+                            <form>
+                                <base-input ref="inputNameRef" v-model="inputName" class="mt-5" alternative placeholder="姓名" addon-left-icon="ni ni-circle-08">
+                                </base-input>
+                                <base-input ref="inputPhoneRef" v-model="inputPhone" class="mt-0" alternative placeholder="手机号" addon-left-icon="ni ni-mobile-button">
+                                </base-input>
+                                <base-input ref="inputCompanyRef" v-model="inputCompany" class="mt-0" alternative placeholder="公司名称" addon-left-icon="ni ni-building">
+                                </base-input>
+                                <base-input ref="inputAddressRef" v-model="inputAddress" class="mt-0" alternative placeholder="地址" addon-left-icon="ni ni-square-pin">
+                                </base-input>
+                                <base-input ref="inputEmailRef" v-model="inputEmail" alternative placeholder="邮箱" addon-left-icon="ni ni-email-83">
+                                </base-input>
+                                <base-input class="mb-4">
+                                    <textarea class="form-control form-control-alternative" name="name" rows="4" cols="80"
+                                        placeholder="提交备注信息..."></textarea>
+                                </base-input>
+                                <div class="error">{{ errorMsg }}</div>
+                                <base-button type="default" round block size="lg" @click="submitForm">
                                提交
-                            </base-button>
+                                </base-button>
+                            </form>
                         </card>
                     </div>
                 </div>
@@ -391,12 +392,14 @@ import { BCarouselSlide } from "bootstrap-vue/esm/components/carousel/carousel-s
 import { VueMarkdown } from "vue-markdown";
 import { getNewDefault } from '@/api/new'
 import { getWorkList } from '@/api/work'
+import Badge from '../components/Badge.vue';
 export default {
-    name: "home",
+    name:'companyhome',
     components: {
         BCarousel,
         BCarouselSlide,
-        VueMarkdown
+        VueMarkdown,
+        Badge
     },
     data() {
         return {
@@ -406,8 +409,10 @@ export default {
             inputAddress:'',
             inputEmail:'',
             inputPhone:'',
+            errorMsg: '',
             newList:[],
             jobList:[],
+            jobKeywords:[],
         }
     },
     mounted(){
@@ -425,17 +430,30 @@ export default {
         const phoneReg = /^1[3-9]\d{9}$/;
         const emailReg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/i;
 
-        if(!phoneReg.test(this.inputPhone)){
-            alert('手机号格式不对');
+        if(!this.inputName){
+            // alert('请输入姓名');
+            this.errorMsg = '请输入姓名'
+            this.$refs.inputNameRef.focus();
             return;
+        }
+        if(!this.inputPhone){
+            // alert('请输入手机号')
+            this.errorMsg = '请输入手机号'
+            this.$refs.inputPhoneRef.focus();
+            return;
+        }
+        if(!phoneReg.test(this.inputPhone)){
+            // alert('手机号格式不对');
+            this.errorMsg = '手机格式不对'
+            return;
+        }
+        if(!this.inputEmail){
+            alert('请输入邮箱');
+            this.$refs.inputEmailRef.focus();
         }
         if(!emailReg.test(this.inputEmail)){
-            alert('邮箱格式不对');
-            return;
-        }
-        if(!this.inputName){
-            alert('请输入姓名');
-            this.$refs.inputNameRef.focus();
+            // alert('邮箱格式不对');
+            this.errorMsg = '邮箱格式不对'
             return;
         }
         if(!this.inputCompany){
@@ -446,15 +464,6 @@ export default {
         if(!this.inputAddress){
             alert('请输入地址');
             this.$refs.inputAddressRef.focus();
-            return;
-        }
-        if(!this.inputEmail){
-            alert('请输入邮箱');
-            this.$refs.inputEmailRef.focus();
-        }
-        if(!this.inputPhone){
-            alert('请输入手机号')
-            this.$refs.inputPhoneRef.focus();
             return;
         }
         alert('提交成功');
@@ -471,16 +480,16 @@ export default {
             try{
                 const res = await getWorkList()
                 this.jobList = res.data
-                console.log(this.jobList)
+                this.jobKeywords = this.jobList.map(item => item.attributes.keywords.split('/'))
+                console.log(this.jobKeywords)
             }catch(err){
                 console.log(err)
             }
-        }
+        },
     },
     // computed: {
-    //     truncateText(){
-    //         const maxLength = 100;
-    //         return this.text.length > maxLength ? this.text.slice(0,maxLength)+' ...':this.text;
+    //     filteredJobList(){
+    //         return this.jobList.slice(0,3)
     //     }
     // },
 };
@@ -513,5 +522,10 @@ export default {
 }
 .align-items-center-top{
     margin-top: 75px;
+}
+.error{
+    display: flex;
+    margin: auto 0;
+    color: red;
 }
 </style>
