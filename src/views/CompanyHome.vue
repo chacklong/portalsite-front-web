@@ -100,21 +100,13 @@
                 </div>
                 <div v-for="(item,index) in newList.slice(0,4)" :key="index" class="row row-grid align-items-center align-items-center-top">
                     <div class="col-md-6 order-md-2">
-                        <img :src="'http://192.168.31.30:1337'+item.attributes.image.data.attributes.url" class="img-fluid floating">
+                        <img :src="'http://localhost:1337'+item.attributes.image.data.attributes.url" class="img-fluid floating">
                     </div>
                     <div class="col-md-6 order-md-1">
                         <div class="pr-md-5">
                             <icon name="ni ni-tag" class="mb-5" size="lg" type="success" shadow rounded></icon>
                             <h4>{{ item.attributes.title }}</h4>
                             <p class="lead">{{ item.attributes.description.slice(0,82)+'...' }}</p>
-                            <!-- <ul class="list-unstyled mt-5">
-                                <li class="py-2">
-                                    <div class="d-flex align-items-center">
-                                        <badge type="success" circle class="mr-3" icon="ni ni-satisfied"></badge>
-                                        <h6 class="mb-0">经验丰富</h6>
-                                    </div>
-                                </li>
-                            </ul> -->
                         </div>
                     </div>
                 </div>

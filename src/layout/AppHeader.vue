@@ -1,6 +1,6 @@
 <template>
     <header class="header-global">
-        <base-nav class="navbar-main" transparent type="" effect="light" expand>
+        <base-nav class="navbar-main" transparent type="dark" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
                 <!-- <img src="img/brand/white.png" alt="logo"> -->
                 科技有限公司
@@ -54,12 +54,10 @@
                         <i class="ni ni-collection d-lg-none"></i>
                         <span class="nav-link-inner--text">MENU2</span>
                     </a>
-                    <!-- <router-link to="/landing" class="dropdown-item">Landing</router-link> -->
                     <router-link to="/Jobs" class="dropdown-item">招聘信息</router-link>
                     <router-link to="/News" class="dropdown-item">企业资讯</router-link>
                     <router-link to="/Contact" class="dropdown-item">联系我们</router-link>
-                    <router-link to="/AbouUs" class="dropdown-item">关于我们</router-link>
-                    <!-- <router-link to="/new" class="dropdown-item">new</router-link> -->
+                    <router-link to="/about" class="dropdown-item">关于我们</router-link>
                 </base-dropdown>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">

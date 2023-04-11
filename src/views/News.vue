@@ -27,7 +27,6 @@
                                 <div class="card-profile-actions py-4 mt-lg-0">
                                     <div class="col-md-12">
                                         <base-input placeholder="文章搜索" addon-right-icon="ni ni-zoom-split-in"></base-input>
-                                        <!-- <base-button type="default" size="sm" class="col">Message</base-button> -->
                                     </div>
                                 </div>
                             </div>
@@ -52,19 +51,12 @@
                             <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>新闻资讯</div>
                             <div><i class="ni education_hat mr-2"></i>news information</div>
                         </div>
-                        <!-- <div class="mt-5 py-5 border-top text-center">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-9">
-                                    <p>瑞安是一位相当广泛的艺术家，这是墨尔本长大的名字， 布鲁克林的尼克·墨菲（Nick Murphy）——创作、表演和录制他自己的所有音乐， 通过坚固的凹槽结构赋予它温暖、亲密的感觉。艺术家 相当大的范围</p>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </card>
                     <div class="mt-5 py-5 text-center">
-                        <div v-for="(item,index) in newList" :key="index" class="row justify-content-center">
+                        <div v-for="(item,index) in newList" :key="index" class="row justify-content-center" style="margin-top: 32px;">
                             <div class="card-profile-image">
-                                <img :src="'http://192.168.31.30:1337'+item.attributes.image.data.attributes.url" alt=" news image" width="700px" height="250px">
+                                <img :src="'http://localhost:1337'+item.attributes.image.data.attributes.url" alt=" news image" width="700px" height="250px">
                             </div>
                             <div class="col-lg-9">
                                 <h4>{{ item.attributes.title }}</h4>
