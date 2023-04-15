@@ -19,7 +19,7 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img v-lazy="'img/theme/team-4-800x800.jpg'" class="rounded-circle">
+                                        <img v-lazy="'img/JOB.png'" class="rounded-circle">
                                     </a>
                                 </div>
                             </div>
@@ -57,8 +57,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="row row-grid">
-                            <div class="col-lg-4" v-for="(item,index) in workList" :key="index" style="margin-top: 32px
-                            ;">
+                            <div class="col-lg-4" v-for="(item,index) in workList" :key="index" style="margin-top: 32px;">
                                 <card class="border-0" hover shadow body-classes="py-5">
                                     <icon name="ni ni-briefcase-24" type="primary" rounded class="mb-4">
                                     </icon>
@@ -67,8 +66,11 @@
                                     <div>
                                         <badge v-for="(keyword,index) in jobKeywords[index]" :key="index" type="primary" rounded>{{ keyword }}</badge>
                                     </div>
-                                    <base-button tag="a" href="#" type="primary" class="mt-4">
+                                    <base-button type="primary" class="mt-4">
                                         投递
+                                    </base-button>
+                                    <base-button type="secondary" class="mt-4" >
+                                        <router-link :to="{name:'jobdetail',params:{id:item.id}}">查看更多</router-link>
                                     </base-button>
                                 </card>
                             </div>

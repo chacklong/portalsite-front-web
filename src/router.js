@@ -9,6 +9,7 @@ import Contact from "./views/Contact.vue";
 import Jobs from "./views/Jobs.vue";
 import NewContent from "./views/NewContent.vue";
 import AbouUs from "./views/AboutUs.vue"
+import JobDetail from './views/JobDetails.vue'
 
 Vue.use(Router);
 
@@ -71,6 +72,11 @@ export default new Router({
       path: "/about",
       name: "aboutus",
       component: AbouUs
+    },
+    {
+      path: "/jobs/:id",
+      name: "jobdetail",
+      component: JobDetail
     }
   ],
   scrollBehavior: to => {

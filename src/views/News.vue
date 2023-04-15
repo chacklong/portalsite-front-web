@@ -19,7 +19,7 @@
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img v-lazy="'img/theme/team-4-800x800.jpg'" class="rounded-circle">
+                                        <img v-lazy="'img/news.png'" class="rounded-circle">
                                     </a>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                     <div class="mt-5 py-5 text-center">
                         <div v-for="(item,index) in newList" :key="index" class="row justify-content-center" style="margin-top: 32px;">
                             <div class="card-profile-image">
-                                <img :src="'http://localhost:1337'+item.attributes.image.data.attributes.url" alt=" news image" width="700px" height="250px">
+                                <img :src="'http://8.222.140.62:1337'+item.attributes.image.data.attributes.url" alt=" news image" width="700px" height="250px">
                             </div>
                             <div class="col-lg-9">
                                 <h4>{{ item.attributes.title }}</h4>

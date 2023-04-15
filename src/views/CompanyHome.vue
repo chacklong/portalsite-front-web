@@ -100,7 +100,7 @@
                 </div>
                 <div v-for="(item,index) in newList.slice(0,4)" :key="index" class="row row-grid align-items-center align-items-center-top">
                     <div class="col-md-6 order-md-2">
-                        <img :src="'http://localhost:1337'+item.attributes.image.data.attributes.url" class="img-fluid floating">
+                        <img :src="'http://8.222.140.62:1337'+item.attributes.image.data.attributes.url" class="img-fluid floating">
                     </div>
                     <div class="col-md-6 order-md-1">
                         <div class="pr-md-5">
@@ -174,7 +174,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="'img/theme/team-1-800x800.jpg'"
+                            <img v-lazy="'img/login1.png'"
                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
@@ -194,7 +194,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="'img/theme/team-2-800x800.jpg'"
+                            <img v-lazy="'img/login2.png'"
                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
@@ -214,7 +214,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="'img/theme/team-3-800x800.jpg'"
+                            <img v-lazy="'img/login3.png'"
                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
@@ -234,7 +234,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="px-4">
-                            <img v-lazy="'img/theme/team-4-800x800.jpg'"
+                            <img v-lazy="'img/login4.png'"
                                 class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 200px;">
                             <div class="pt-4 text-center">
                                 <h5 class="title">
@@ -265,8 +265,8 @@
                                 <p class="lead text-white mt-3">介绍公司的招聘信息和职业发展机会，让访客有机会了解公司的文化、价值观和发展前景</p>
                             </div>
                             <div class="col-lg-3 ml-lg-auto">
-                                <base-button tag="a" href="http://localhost:8080/Jobs" type="white" block size="lg">
-                                    加入我们
+                                <base-button tag="a" type="white" block size="lg">
+                                    <router-link to="/Jobs" class="dropdown-item">加入我们</router-link>
                                 </base-button>
                             </div>
                         </div>
