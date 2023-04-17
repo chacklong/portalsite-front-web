@@ -473,7 +473,7 @@ export default {
                 const res = await getWorkList()
                 this.jobList = res.data
                 this.jobKeywords = this.jobList.map(item => item.attributes.keywords.split('/'))
-                console.log(this.jobKeywords)
+                // console.log(this.jobKeywords)
             }catch(err){
                 console.log(err)
             }

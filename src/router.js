@@ -66,17 +66,29 @@ export default new Router({
     {
       path: "/news/:id",
       name: "newcontent",
-      component: NewContent
+      components:{
+        header: AppHeader,
+        default: NewContent,
+        footer: AppFooter
+      }
     },
     {
       path: "/about",
       name: "aboutus",
-      component: AbouUs
+      components: {
+        header: AppHeader,
+        default: AbouUs,
+        footer: AppFooter
+      }
     },
     {
       path: "/jobs/:id",
       name: "jobdetail",
-      component: JobDetail
+      components: {
+        header: AppHeader,
+        default: JobDetail,
+        footer: AppFooter
+      }
     }
   ],
   scrollBehavior: to => {

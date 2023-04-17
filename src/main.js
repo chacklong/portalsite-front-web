@@ -21,7 +21,6 @@ import router from "./router";
 import Argon from "./plugins/argon-kit";
 import './registerServiceWorker'
 import axios from "axios";
-// import vue_markdown from "vue-markdown";
 
 Vue.config.productionTip = false;
 Vue.use(Argon);

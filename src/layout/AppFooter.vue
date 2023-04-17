@@ -1,13 +1,16 @@
 <template>
     <footer class="footer has-cards">
-        <div class="container container-lg">
-        </div>
         <div class="container">
+            <hr>
             <div class="row row-grid align-items-center my-md">
-                <div class="col-lg-6">
-                    <h3 class="text-primary font-weight-light mb-2">感谢您对我们的支持！</h3>
-                    <h4 class="mb-0 font-weight-light">让我们在这些平台上取得联系。
-</h4>
+                <div class="col-lg-3">
+                    <h5 class="text-dark font-weight-light mb-3 ml-4">公众号</h5>
+                    <img src="../../public/weixin.jpg" width="120px" height="130px" alt="">
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="text-dark font-weight-light mb-6 ml-4">联系方式</h5>
+                    <p class="lead">座机：0851-177888901</p>
+                    <p class="lead">电话：1898465790</p>
                 </div>
             </div>
             <hr>
@@ -49,4 +52,12 @@ export default {
 };
 </script>
 <style>
+.footer.has-cards:before{
+    top: 450px !important;
+    background: #fff !important;
+    height: auto !important;
+}
+.mb-6{
+    margin-bottom: 40px;
+}
 </style>
